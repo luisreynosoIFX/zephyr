@@ -23,6 +23,9 @@ i2c0: &scb0 {
 	pinctrl-0 = <&p8_0_scb0_i2c_scl &p8_1_scb0_i2c_sda>;
 	pinctrl-names = "default";
 
+	scl-gpios = <&gpio_prt8 0 GPIO_OPEN_DRAIN>;
+	sda-gpios = <&gpio_prt8 1 GPIO_OPEN_DRAIN>;
+
 	/* Infineon CY15B104Q I2C FRAM (part of CY15FRAMKIT-001)
 	 * This is a 256Kbit (32KB) I2C FRAM device
 	 * I2C address is 0x51 (with A0=1, A1=0, A2=0)
